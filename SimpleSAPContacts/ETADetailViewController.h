@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface ETADetailViewController : UIViewController
+@interface ETADetailViewController : UIViewController<MKMapViewDelegate>
 
-@property (strong, nonatomic) id detailItem;
+@property (assign, nonatomic) NSFetchedResultsController *detailFetchedResultsController;
+@property (strong, nonatomic) NSIndexPath *selectedIndexPath;
+@property (strong, nonatomic) IBOutlet UILabel *accountNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *accountNumberLabel;
+@property (strong, nonatomic) IBOutlet UILabel *addressLabel;
+@property (strong, nonatomic) IBOutlet MKMapView *localMapView;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
 @end

@@ -8,7 +8,22 @@
 
 #import "ETAAppDelegate.h"
 
-#import "ETAMasterViewController.h"
+#import "ETAContactsViewController.h"
+
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
+#define kSAPContactsURL [NSURL URLWithString:@"http://207.188.73.86:8001/sap/zappkpart?sap-client=800"]
+
+#define kLatestKivaLoansURL [NSURL URLWithString:@"http://api.kivaws.org/v1/loans/search.json?status=fundraising"]
+
+@interface ETAAppDelegate ()
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *currentLocation;
+- (void)startLocationService;
+
+@end
+
 
 @implementation ETAAppDelegate
 
@@ -16,12 +31,38 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+@synthesize currentLocation = _currentLocation;
+@synthesize locationManager = _locationManager;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    ETAMasterViewController *controller = (ETAMasterViewController *)navigationController.topViewController;
+    ETAContactsViewController *controller = (ETAContactsViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    //location services disabled alert
+    if ([CLLocationManager locationServicesEnabled] == NO) {
+        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled" message:@"You currently have all location services for this device disabled. If you proceed, you will be asked to confirm whether location services should be reenabled." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [servicesDisabledAlert show];
+    }
+    else {
+        [self startLocationService];
+    }
+    
+    if (![self coreDataHasEntriesForEntityName:@"Contact"]) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+        dispatch_async(kBgQueue,
+                       ^{
+                           NSData *jsonData = [NSData dataWithContentsOfURL:kSAPContactsURL];
+                           
+                           [self performSelectorOnMainThread:@selector(contactsDataReceived:) withObject:jsonData waitUntilDone:YES];
+                       });
+    }
+    else {
+        [controller performSelectorInBackground:@selector(reloadDataOnView) withObject:nil];
+    }
+
     return YES;
 }
 							
@@ -146,6 +187,62 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - Instance
+
+- (void)contactsDataReceived:(NSData *)receivedData {
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    ETAContactsViewController *controller = (ETAContactsViewController *)navigationController.topViewController;
+    
+    [controller performSelectorInBackground:@selector(parseFetchedContactsData:) withObject:receivedData];
+
+}
+
+- (BOOL)coreDataHasEntriesForEntityName:(NSString *)entityName {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
+    [request setEntity:entity];
+    [request setFetchLimit:1];
+    NSError *error = nil;
+    NSArray *results = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (!results) {
+        NSLog(@"Fetch error: %@", error);
+//        abort();
+    }
+    if ([results count] == 0) {
+        return NO;
+    }
+    return YES;
+}
+
+- (void)startLocationService {
+    if (self.locationManager == nil) {
+        CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        
+        self.locationManager = locationManager;
+        
+        [self.locationManager startUpdatingLocation];
+    }
+}
+
+#pragma mark - CLLocationManager
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    self.currentLocation = (CLLocation*)[locations lastObject];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if (status == kCLAuthorizationStatusAuthorized) {
+        [self startLocationService];//in case
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    NSLog(@"Error - We're either explicitely denied location services or its off.");
 }
 
 @end
