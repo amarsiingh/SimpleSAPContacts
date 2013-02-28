@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C60763816DDF711001A5A87 /* ETAContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60763716DDF711001A5A87 /* ETAContactsViewController.m */; };
+		4C60763A16DE10E7001A5A87 /* zappkpart.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C60763916DE10E7001A5A87 /* zappkpart.txt */; };
+		4C60764016DE1CFB001A5A87 /* ContactDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60763F16DE1CFB001A5A87 /* ContactDetails.m */; };
+		4C60764316DE1D58001A5A87 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764216DE1D58001A5A87 /* Contact.m */; };
+		4C60764616DE87E3001A5A87 /* ETADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764516DE87E3001A5A87 /* ETADetailViewController.m */; };
+		4C60764816DF329A001A5A87 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60764716DF329A001A5A87 /* CoreLocation.framework */; };
+		4C60764A16DF32A1001A5A87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60764916DF32A1001A5A87 /* MapKit.framework */; };
+		4C60764D16DF3A0D001A5A87 /* ETAClientLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764C16DF3A0D001A5A87 /* ETAClientLocation.m */; };
+		4C60764F16DF3ABB001A5A87 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60764E16DF3ABB001A5A87 /* AddressBook.framework */; };
+		4C60765216DF4704001A5A87 /* ETADetailMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60765116DF4704001A5A87 /* ETADetailMapViewController.m */; };
 		4C7ABD6916DDED600092E789 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6816DDED600092E789 /* UIKit.framework */; };
 		4C7ABD6B16DDED600092E789 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6A16DDED600092E789 /* Foundation.framework */; };
 		4C7ABD6D16DDED600092E789 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6C16DDED600092E789 /* CoreGraphics.framework */; };
@@ -19,11 +29,25 @@
 		4C7ABD8116DDED610092E789 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8016DDED610092E789 /* Default-568h@2x.png */; };
 		4C7ABD8416DDED620092E789 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8216DDED620092E789 /* MainStoryboard.storyboard */; };
 		4C7ABD8716DDED620092E789 /* SimpleSAPContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8516DDED620092E789 /* SimpleSAPContacts.xcdatamodeld */; };
-		4C7ABD8A16DDED620092E789 /* ETAMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8916DDED620092E789 /* ETAMasterViewController.m */; };
-		4C7ABD8D16DDED620092E789 /* ETADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8C16DDED620092E789 /* ETADetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C60763616DDF711001A5A87 /* ETAContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAContactsViewController.h; sourceTree = "<group>"; };
+		4C60763716DDF711001A5A87 /* ETAContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAContactsViewController.m; sourceTree = "<group>"; };
+		4C60763916DE10E7001A5A87 /* zappkpart.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zappkpart.txt; sourceTree = "<group>"; };
+		4C60763E16DE1CFB001A5A87 /* ContactDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetails.h; sourceTree = "<group>"; };
+		4C60763F16DE1CFB001A5A87 /* ContactDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetails.m; sourceTree = "<group>"; };
+		4C60764116DE1D58001A5A87 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		4C60764216DE1D58001A5A87 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		4C60764416DE87E3001A5A87 /* ETADetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETADetailViewController.h; sourceTree = "<group>"; };
+		4C60764516DE87E3001A5A87 /* ETADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETADetailViewController.m; sourceTree = "<group>"; };
+		4C60764716DF329A001A5A87 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4C60764916DF32A1001A5A87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4C60764B16DF3A0D001A5A87 /* ETAClientLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAClientLocation.h; sourceTree = "<group>"; };
+		4C60764C16DF3A0D001A5A87 /* ETAClientLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAClientLocation.m; sourceTree = "<group>"; };
+		4C60764E16DF3ABB001A5A87 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		4C60765016DF4704001A5A87 /* ETADetailMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETADetailMapViewController.h; sourceTree = "<group>"; };
+		4C60765116DF4704001A5A87 /* ETADetailMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETADetailMapViewController.m; sourceTree = "<group>"; };
 		4C7ABD6516DDED5F0092E789 /* SimpleSAPContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSAPContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7ABD6816DDED600092E789 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4C7ABD6A16DDED600092E789 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,10 +64,6 @@
 		4C7ABD8016DDED610092E789 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4C7ABD8316DDED620092E789 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4C7ABD8616DDED620092E789 /* SimpleSAPContacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleSAPContacts.xcdatamodel; sourceTree = "<group>"; };
-		4C7ABD8816DDED620092E789 /* ETAMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETAMasterViewController.h; sourceTree = "<group>"; };
-		4C7ABD8916DDED620092E789 /* ETAMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETAMasterViewController.m; sourceTree = "<group>"; };
-		4C7ABD8B16DDED620092E789 /* ETADetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETADetailViewController.h; sourceTree = "<group>"; };
-		4C7ABD8C16DDED620092E789 /* ETADetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETADetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C60764F16DF3ABB001A5A87 /* AddressBook.framework in Frameworks */,
+				4C60764A16DF32A1001A5A87 /* MapKit.framework in Frameworks */,
+				4C60764816DF329A001A5A87 /* CoreLocation.framework in Frameworks */,
 				4C7ABD6916DDED600092E789 /* UIKit.framework in Frameworks */,
 				4C7ABD6B16DDED600092E789 /* Foundation.framework in Frameworks */,
 				4C7ABD6D16DDED600092E789 /* CoreGraphics.framework in Frameworks */,
@@ -81,6 +104,9 @@
 		4C7ABD6716DDED5F0092E789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C60764E16DF3ABB001A5A87 /* AddressBook.framework */,
+				4C60764916DF32A1001A5A87 /* MapKit.framework */,
+				4C60764716DF329A001A5A87 /* CoreLocation.framework */,
 				4C7ABD6816DDED600092E789 /* UIKit.framework */,
 				4C7ABD6A16DDED600092E789 /* Foundation.framework */,
 				4C7ABD6C16DDED600092E789 /* CoreGraphics.framework */,
@@ -95,11 +121,20 @@
 				4C7ABD7916DDED610092E789 /* ETAAppDelegate.h */,
 				4C7ABD7A16DDED610092E789 /* ETAAppDelegate.m */,
 				4C7ABD8216DDED620092E789 /* MainStoryboard.storyboard */,
-				4C7ABD8816DDED620092E789 /* ETAMasterViewController.h */,
-				4C7ABD8916DDED620092E789 /* ETAMasterViewController.m */,
-				4C7ABD8B16DDED620092E789 /* ETADetailViewController.h */,
-				4C7ABD8C16DDED620092E789 /* ETADetailViewController.m */,
+				4C60763616DDF711001A5A87 /* ETAContactsViewController.h */,
+				4C60763716DDF711001A5A87 /* ETAContactsViewController.m */,
 				4C7ABD8516DDED620092E789 /* SimpleSAPContacts.xcdatamodeld */,
+				4C60764116DE1D58001A5A87 /* Contact.h */,
+				4C60764216DE1D58001A5A87 /* Contact.m */,
+				4C60763E16DE1CFB001A5A87 /* ContactDetails.h */,
+				4C60763F16DE1CFB001A5A87 /* ContactDetails.m */,
+				4C60764416DE87E3001A5A87 /* ETADetailViewController.h */,
+				4C60764516DE87E3001A5A87 /* ETADetailViewController.m */,
+				4C60764B16DF3A0D001A5A87 /* ETAClientLocation.h */,
+				4C60764C16DF3A0D001A5A87 /* ETAClientLocation.m */,
+				4C60765016DF4704001A5A87 /* ETADetailMapViewController.h */,
+				4C60765116DF4704001A5A87 /* ETADetailMapViewController.m */,
+				4C60763916DE10E7001A5A87 /* zappkpart.txt */,
 				4C7ABD7116DDED600092E789 /* Supporting Files */,
 			);
 			path = SimpleSAPContacts;
@@ -176,6 +211,7 @@
 				4C7ABD7F16DDED610092E789 /* Default@2x.png in Resources */,
 				4C7ABD8116DDED610092E789 /* Default-568h@2x.png in Resources */,
 				4C7ABD8416DDED620092E789 /* MainStoryboard.storyboard in Resources */,
+				4C60763A16DE10E7001A5A87 /* zappkpart.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,8 +225,12 @@
 				4C7ABD7716DDED610092E789 /* main.m in Sources */,
 				4C7ABD7B16DDED610092E789 /* ETAAppDelegate.m in Sources */,
 				4C7ABD8716DDED620092E789 /* SimpleSAPContacts.xcdatamodeld in Sources */,
-				4C7ABD8A16DDED620092E789 /* ETAMasterViewController.m in Sources */,
-				4C7ABD8D16DDED620092E789 /* ETADetailViewController.m in Sources */,
+				4C60763816DDF711001A5A87 /* ETAContactsViewController.m in Sources */,
+				4C60764016DE1CFB001A5A87 /* ContactDetails.m in Sources */,
+				4C60764316DE1D58001A5A87 /* Contact.m in Sources */,
+				4C60764616DE87E3001A5A87 /* ETADetailViewController.m in Sources */,
+				4C60764D16DF3A0D001A5A87 /* ETAClientLocation.m in Sources */,
+				4C60765216DF4704001A5A87 /* ETADetailMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +353,7 @@
 				4C7ABD9216DDED620092E789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
