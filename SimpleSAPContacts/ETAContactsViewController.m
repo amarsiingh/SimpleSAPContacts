@@ -12,6 +12,7 @@
 #import "ContactDetails.h"
 #import "ETADetailViewController.h"
 #import "ETADetailMapViewController.h"
+#import "ETAUtility.h"
 
 //static int t_count = 0;
 
@@ -46,7 +47,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.view bringSubviewToFront:self.activityIndicator];
+//    [self.view bringSubviewToFront:self.activityIndicator];
+
 }
 
 - (void)viewDidUnload {
@@ -93,13 +95,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+
 //    [self performSegueWithIdentifier:@"showDetail" sender:self];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -138,6 +134,8 @@
         contactDetails.houseNumber = [aContact objectForKey:@"house_num1"];
         contactDetails.zipCode = [aContact objectForKey:@"post_code1"];
         contactDetails.street = [aContact objectForKey:@"street"];
+        contactDetails.latitude = [NSNumber numberWithDouble:(-200.000000)];
+        contactDetails.longitude = [NSNumber numberWithDouble:(400.000000)];
         
         contact.details = contactDetails;
         contactDetails.info = contact;
@@ -160,6 +158,8 @@
     }
     [self.tableView reloadData];
     [self.viewGlobalMapButton setEnabled:YES];
+    
+    [((ETAAppDelegate*)[UIApplication sharedApplication].delegate).activityIndicator removeFromSuperview];
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
@@ -167,9 +167,6 @@
     cell.textLabel.text = aContact.accountName;
     NSLog(@"accountName: %@", aContact.accountName);
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Account No. %@", aContact.accountNumber];
-//    if ((t_count++) == 20) {
-//        [self.activityIndicator stopAnimating];
-//    }
 }
 
 #pragma mark - FetchedResultsController

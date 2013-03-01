@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+
+@protocol LocationUpdateDelegate <NSObject>
+
+- (void)delegate:(id)delegate didGetLocationUpdate:(NSArray *)locations;
+
+@end
+
+
 @interface ETAAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -17,6 +25,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) CLLocation *currentLocation;
+@property (assign, nonatomic) id<LocationUpdateDelegate> mapDelegate;
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

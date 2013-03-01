@@ -9,12 +9,14 @@
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="houseNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zipCode" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="info" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="details" inverseEntity="Contact" syncable="YES"/>
     </entity>
     <elements>
         <element name="Contact" positionX="-38" positionY="-63" width="128" height="90"/>
-        <element name="ContactDetails" positionX="189" positionY="-54" width="128" height="135"/>
+        <element name="ContactDetails" positionX="189" positionY="-54" width="128" height="165"/>
     </elements>
 </model>

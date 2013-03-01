@@ -2,7 +2,7 @@
 //  ContactDetails.h
 //  SimpleSAPContacts
 //
-//  Created by Amarsingh Pardeshi on 2/27/13.
+//  Created by Amarsingh Pardeshi on 2/28/13.
 //  Copyright (c) 2013 Eat The Apple Inc. All rights reserved.
 //
 
@@ -18,6 +18,8 @@
 @property (nonatomic, retain) NSString * houseNumber;
 @property (nonatomic, retain) NSString * street;
 @property (nonatomic, retain) NSString * zipCode;
+@property (nonatomic, retain) NSNumber * latitude;
+@property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) Contact *info;
 
 @end

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4D810016E0EDD9005A06A8 /* ETAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D80FF16E0EDD9005A06A8 /* ETAUtility.m */; };
 		4C60763816DDF711001A5A87 /* ETAContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60763716DDF711001A5A87 /* ETAContactsViewController.m */; };
 		4C60763A16DE10E7001A5A87 /* zappkpart.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C60763916DE10E7001A5A87 /* zappkpart.txt */; };
-		4C60764016DE1CFB001A5A87 /* ContactDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60763F16DE1CFB001A5A87 /* ContactDetails.m */; };
 		4C60764316DE1D58001A5A87 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764216DE1D58001A5A87 /* Contact.m */; };
 		4C60764616DE87E3001A5A87 /* ETADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764516DE87E3001A5A87 /* ETADetailViewController.m */; };
 		4C60764816DF329A001A5A87 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60764716DF329A001A5A87 /* CoreLocation.framework */; };
@@ -29,14 +29,15 @@
 		4C7ABD8116DDED610092E789 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8016DDED610092E789 /* Default-568h@2x.png */; };
 		4C7ABD8416DDED620092E789 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8216DDED620092E789 /* MainStoryboard.storyboard */; };
 		4C7ABD8716DDED620092E789 /* SimpleSAPContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8516DDED620092E789 /* SimpleSAPContacts.xcdatamodeld */; };
+		4CAA2FED16DFCA800056D8A2 /* ContactDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2FEC16DFCA800056D8A2 /* ContactDetails.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C4D80FE16E0EDD9005A06A8 /* ETAUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAUtility.h; sourceTree = "<group>"; };
+		4C4D80FF16E0EDD9005A06A8 /* ETAUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAUtility.m; sourceTree = "<group>"; };
 		4C60763616DDF711001A5A87 /* ETAContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAContactsViewController.h; sourceTree = "<group>"; };
 		4C60763716DDF711001A5A87 /* ETAContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAContactsViewController.m; sourceTree = "<group>"; };
 		4C60763916DE10E7001A5A87 /* zappkpart.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zappkpart.txt; sourceTree = "<group>"; };
-		4C60763E16DE1CFB001A5A87 /* ContactDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetails.h; sourceTree = "<group>"; };
-		4C60763F16DE1CFB001A5A87 /* ContactDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetails.m; sourceTree = "<group>"; };
 		4C60764116DE1D58001A5A87 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		4C60764216DE1D58001A5A87 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		4C60764416DE87E3001A5A87 /* ETADetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETADetailViewController.h; sourceTree = "<group>"; };
@@ -64,6 +65,8 @@
 		4C7ABD8016DDED610092E789 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4C7ABD8316DDED620092E789 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4C7ABD8616DDED620092E789 /* SimpleSAPContacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleSAPContacts.xcdatamodel; sourceTree = "<group>"; };
+		4CAA2FEB16DFCA800056D8A2 /* ContactDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetails.h; sourceTree = "<group>"; };
+		4CAA2FEC16DFCA800056D8A2 /* ContactDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetails.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,16 +127,18 @@
 				4C60763616DDF711001A5A87 /* ETAContactsViewController.h */,
 				4C60763716DDF711001A5A87 /* ETAContactsViewController.m */,
 				4C7ABD8516DDED620092E789 /* SimpleSAPContacts.xcdatamodeld */,
+				4CAA2FEB16DFCA800056D8A2 /* ContactDetails.h */,
+				4CAA2FEC16DFCA800056D8A2 /* ContactDetails.m */,
 				4C60764116DE1D58001A5A87 /* Contact.h */,
 				4C60764216DE1D58001A5A87 /* Contact.m */,
-				4C60763E16DE1CFB001A5A87 /* ContactDetails.h */,
-				4C60763F16DE1CFB001A5A87 /* ContactDetails.m */,
 				4C60764416DE87E3001A5A87 /* ETADetailViewController.h */,
 				4C60764516DE87E3001A5A87 /* ETADetailViewController.m */,
 				4C60764B16DF3A0D001A5A87 /* ETAClientLocation.h */,
 				4C60764C16DF3A0D001A5A87 /* ETAClientLocation.m */,
 				4C60765016DF4704001A5A87 /* ETADetailMapViewController.h */,
 				4C60765116DF4704001A5A87 /* ETADetailMapViewController.m */,
+				4C4D80FE16E0EDD9005A06A8 /* ETAUtility.h */,
+				4C4D80FF16E0EDD9005A06A8 /* ETAUtility.m */,
 				4C60763916DE10E7001A5A87 /* zappkpart.txt */,
 				4C7ABD7116DDED600092E789 /* Supporting Files */,
 			);
@@ -226,11 +231,12 @@
 				4C7ABD7B16DDED610092E789 /* ETAAppDelegate.m in Sources */,
 				4C7ABD8716DDED620092E789 /* SimpleSAPContacts.xcdatamodeld in Sources */,
 				4C60763816DDF711001A5A87 /* ETAContactsViewController.m in Sources */,
-				4C60764016DE1CFB001A5A87 /* ContactDetails.m in Sources */,
 				4C60764316DE1D58001A5A87 /* Contact.m in Sources */,
 				4C60764616DE87E3001A5A87 /* ETADetailViewController.m in Sources */,
 				4C60764D16DF3A0D001A5A87 /* ETAClientLocation.m in Sources */,
 				4C60765216DF4704001A5A87 /* ETADetailMapViewController.m in Sources */,
+				4CAA2FED16DFCA800056D8A2 /* ContactDetails.m in Sources */,
+				4C4D810016E0EDD9005A06A8 /* ETAUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

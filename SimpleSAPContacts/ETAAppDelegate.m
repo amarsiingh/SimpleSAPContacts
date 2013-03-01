@@ -9,6 +9,8 @@
 #import "ETAAppDelegate.h"
 
 #import "ETAContactsViewController.h"
+#import "ETADetailMapViewController.h"
+#import "ETAUtility.h"
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
@@ -34,12 +36,25 @@
 @synthesize currentLocation = _currentLocation;
 @synthesize locationManager = _locationManager;
 
+@synthesize mapDelegate = _mapDelegate;
+@synthesize activityIndicator = _activityIndicator;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     ETAContactsViewController *controller = (ETAContactsViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    self.activityIndicator.color = [UIColor blueColor];
+    self.activityIndicator.alpha = 1.0;
+    self.activityIndicator.center = CGPointMake([UIScreen mainScreen].applicationFrame.size.width/2.0f, [UIScreen mainScreen].applicationFrame.size.height/2.0f);
+    self.activityIndicator.hidesWhenStopped = NO;
+    
+    [controller.view addSubview:_activityIndicator];
+    [controller.view bringSubviewToFront:_activityIndicator];
+    [_activityIndicator startAnimating];
     
     //location services disabled alert
     if ([CLLocationManager locationServicesEnabled] == NO) {
@@ -50,8 +65,11 @@
         [self startLocationService];
     }
     
+
+    
     if (![self coreDataHasEntriesForEntityName:@"Contact"]) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+
         dispatch_async(kBgQueue,
                        ^{
                            NSData *jsonData = [NSData dataWithContentsOfURL:kSAPContactsURL];
@@ -222,10 +240,10 @@
         locationManager.delegate = self;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         locationManager.distanceFilter = kCLDistanceFilterNone;
-        
+
         self.locationManager = locationManager;
         
-        [self.locationManager startUpdatingLocation];
+        [self.locationManager startMonitoringSignificantLocationChanges];
     }
 }
 
@@ -233,6 +251,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     self.currentLocation = (CLLocation*)[locations lastObject];
+    [self.mapDelegate delegate:self didGetLocationUpdate:locations];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {

@@ -23,6 +23,7 @@
 @property (strong, nonatomic) NSString *address;
 
 - (void)updateTheMapWithLatLong:(NSArray*)coordinates;
+- (void)updateContactDetailWithCoordinates:(NSArray*)coordinates;
 
 @end
 
@@ -56,19 +57,28 @@
     self.accountNumberLabel.text = aContact.accountNumber;
 
     self.addressLabel.text = [NSString stringWithFormat:@"%@, %@,\n%@ - %@,\n%@.", contactDetail.houseNumber, contactDetail.street, contactDetail.city, contactDetail.zipCode, contactDetail.country];
-    self.address = [self.addressLabel.text stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];    
-    dispatch_async(kBgQueue, ^{
-        CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-        [geocoder geocodeAddressString:self.address completionHandler:^(NSArray* placemarks, NSError* error){
-            CLPlacemark* aPlacemark = [placemarks objectAtIndex:0];
-
+    self.address = [NSString stringWithFormat:@"%@, %@, %@, %@", contactDetail.houseNumber, contactDetail.street, contactDetail.city, contactDetail.country];    
+    if (CLLocationCoordinate2DIsValid(CLLocationCoordinate2DMake([contactDetail.latitude doubleValue], [contactDetail.longitude doubleValue]))) {
+        NSString *latDest1 = [NSString stringWithFormat:@"%.4f",[contactDetail.latitude doubleValue]];
+        NSString *lngDest1 = [NSString stringWithFormat:@"%.4f",[contactDetail.longitude doubleValue]];
+        NSLog(@"lat: %@, lng: %@", latDest1, lngDest1);
+        [self performSelector:@selector(updateTheMapWithLatLong:) withObject:[NSArray arrayWithObjects:latDest1, lngDest1, nil]];
+    } else {
+        dispatch_async(kBgQueue, ^{
+            CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+            [geocoder geocodeAddressString:self.address completionHandler:^(NSArray* placemarks, NSError* error){
+                //Pick at the top one.
+                CLPlacemark* aPlacemark = [placemarks objectAtIndex:0];
+                
                 // Process the placemark.
-            NSString *latDest1 = [NSString stringWithFormat:@"%.4f",aPlacemark.location.coordinate.latitude];
-            NSString *lngDest1 = [NSString stringWithFormat:@"%.4f",aPlacemark.location.coordinate.longitude];
-            NSLog(@"lat: %@, lng: %@", latDest1, lngDest1);
-            [self performSelectorOnMainThread:@selector(updateTheMapWithLatLong:) withObject:[NSArray arrayWithObjects:latDest1, lngDest1, nil] waitUntilDone:YES];
-        }];
-    });
+                NSString *latDest1 = [NSString stringWithFormat:@"%.4f",aPlacemark.location.coordinate.latitude];
+                NSString *lngDest1 = [NSString stringWithFormat:@"%.4f",aPlacemark.location.coordinate.longitude];
+                //NSLog(@"lat: %@, lng: %@", latDest1, lngDest1);
+                [self performSelectorOnMainThread:@selector(updateTheMapWithLatLong:) withObject:[NSArray arrayWithObjects:latDest1, lngDest1, nil] waitUntilDone:YES];
+                [self performSelectorOnMainThread:@selector(updateContactDetailWithCoordinates:) withObject:[NSArray arrayWithObjects:latDest1, lngDest1, nil] waitUntilDone:YES];
+            }];
+        });
+    }
     
 }
 
@@ -90,6 +100,7 @@
 #pragma mark - Instance
 
 - (void)updateTheMapWithLatLong:(NSArray *)coordinates {
+    
     //Clean up slate
     for (id<MKAnnotation> annotation in self.localMapView.annotations) {
         [self.localMapView removeAnnotation:annotation];
@@ -100,6 +111,7 @@
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = [[coordinates objectAtIndex:0] doubleValue];
     zoomLocation.longitude= [[coordinates objectAtIndex:1] doubleValue];
+    
     
     // 2
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
@@ -137,7 +149,13 @@
 }
 
 
-#pragma mark - Unwinding Segue
+- (void)updateContactDetailWithCoordinates:(NSArray *)coordinates {
+    Contact *aContact = [self.detailFetchedResultsController objectAtIndexPath:self.selectedIndexPath];
+    ContactDetails *contactDetail = aContact.details;
+    
+    contactDetail.latitude = [NSNumber numberWithDouble:[[coordinates objectAtIndex:0] doubleValue]];
+    contactDetail.longitude = [NSNumber numberWithDouble:[[coordinates objectAtIndex:1] doubleValue]];
+}
 
 
 
