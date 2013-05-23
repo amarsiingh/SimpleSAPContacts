@@ -7,6 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C018D64174E2D2800132BD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD7616DDED610092E789 /* main.m */; };
+		4C018D65174E2D2800132BD4 /* ETAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD7A16DDED610092E789 /* ETAAppDelegate.m */; };
+		4C018D66174E2D2800132BD4 /* SimpleSAPContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8516DDED620092E789 /* SimpleSAPContacts.xcdatamodeld */; };
+		4C018D67174E2D2800132BD4 /* ETAContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60763716DDF711001A5A87 /* ETAContactsViewController.m */; };
+		4C018D68174E2D2800132BD4 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764216DE1D58001A5A87 /* Contact.m */; };
+		4C018D69174E2D2800132BD4 /* ETADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764516DE87E3001A5A87 /* ETADetailViewController.m */; };
+		4C018D6A174E2D2800132BD4 /* ETAClientLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764C16DF3A0D001A5A87 /* ETAClientLocation.m */; };
+		4C018D6B174E2D2800132BD4 /* ETADetailMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60765116DF4704001A5A87 /* ETADetailMapViewController.m */; };
+		4C018D6C174E2D2800132BD4 /* ContactDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2FEC16DFCA800056D8A2 /* ContactDetails.m */; };
+		4C018D6D174E2D2800132BD4 /* ETAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D80FF16E0EDD9005A06A8 /* ETAUtility.m */; };
+		4C018D6F174E2D2800132BD4 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60764E16DF3ABB001A5A87 /* AddressBook.framework */; };
+		4C018D70174E2D2800132BD4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60764916DF32A1001A5A87 /* MapKit.framework */; };
+		4C018D71174E2D2800132BD4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60764716DF329A001A5A87 /* CoreLocation.framework */; };
+		4C018D72174E2D2800132BD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6816DDED600092E789 /* UIKit.framework */; };
+		4C018D73174E2D2800132BD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6A16DDED600092E789 /* Foundation.framework */; };
+		4C018D74174E2D2800132BD4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6C16DDED600092E789 /* CoreGraphics.framework */; };
+		4C018D75174E2D2800132BD4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6E16DDED600092E789 /* CoreData.framework */; };
+		4C018D77174E2D2800132BD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD7316DDED610092E789 /* InfoPlist.strings */; };
+		4C018D78174E2D2800132BD4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD7C16DDED610092E789 /* Default.png */; };
+		4C018D79174E2D2800132BD4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD7E16DDED610092E789 /* Default@2x.png */; };
+		4C018D7A174E2D2800132BD4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8016DDED610092E789 /* Default-568h@2x.png */; };
+		4C018D7B174E2D2800132BD4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8216DDED620092E789 /* MainStoryboard.storyboard */; };
+		4C018D7C174E2D2800132BD4 /* zappkpart.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C60763916DE10E7001A5A87 /* zappkpart.txt */; };
+		4C018D84174E2D3200132BD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD7616DDED610092E789 /* main.m */; };
+		4C018D85174E2D3200132BD4 /* ETAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD7A16DDED610092E789 /* ETAAppDelegate.m */; };
+		4C018D86174E2D3200132BD4 /* SimpleSAPContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8516DDED620092E789 /* SimpleSAPContacts.xcdatamodeld */; };
+		4C018D87174E2D3200132BD4 /* ETAContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60763716DDF711001A5A87 /* ETAContactsViewController.m */; };
+		4C018D88174E2D3200132BD4 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764216DE1D58001A5A87 /* Contact.m */; };
+		4C018D89174E2D3200132BD4 /* ETADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764516DE87E3001A5A87 /* ETADetailViewController.m */; };
+		4C018D8A174E2D3200132BD4 /* ETAClientLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60764C16DF3A0D001A5A87 /* ETAClientLocation.m */; };
+		4C018D8B174E2D3200132BD4 /* ETADetailMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60765116DF4704001A5A87 /* ETADetailMapViewController.m */; };
+		4C018D8C174E2D3200132BD4 /* ContactDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2FEC16DFCA800056D8A2 /* ContactDetails.m */; };
+		4C018D8D174E2D3200132BD4 /* ETAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D80FF16E0EDD9005A06A8 /* ETAUtility.m */; };
+		4C018D8F174E2D3200132BD4 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60764E16DF3ABB001A5A87 /* AddressBook.framework */; };
+		4C018D90174E2D3200132BD4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60764916DF32A1001A5A87 /* MapKit.framework */; };
+		4C018D91174E2D3200132BD4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60764716DF329A001A5A87 /* CoreLocation.framework */; };
+		4C018D92174E2D3200132BD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6816DDED600092E789 /* UIKit.framework */; };
+		4C018D93174E2D3200132BD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6A16DDED600092E789 /* Foundation.framework */; };
+		4C018D94174E2D3200132BD4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6C16DDED600092E789 /* CoreGraphics.framework */; };
+		4C018D95174E2D3200132BD4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7ABD6E16DDED600092E789 /* CoreData.framework */; };
+		4C018D97174E2D3200132BD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD7316DDED610092E789 /* InfoPlist.strings */; };
+		4C018D98174E2D3200132BD4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD7C16DDED610092E789 /* Default.png */; };
+		4C018D99174E2D3200132BD4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD7E16DDED610092E789 /* Default@2x.png */; };
+		4C018D9A174E2D3200132BD4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8016DDED610092E789 /* Default-568h@2x.png */; };
+		4C018D9B174E2D3200132BD4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8216DDED620092E789 /* MainStoryboard.storyboard */; };
+		4C018D9C174E2D3200132BD4 /* zappkpart.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C60763916DE10E7001A5A87 /* zappkpart.txt */; };
+		4C018DA4174E2D6B00132BD4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C018DA3174E2D6B00132BD4 /* QuartzCore.framework */; };
+		4C018DA6174E2D7300132BD4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C018DA5174E2D7300132BD4 /* CFNetwork.framework */; };
+		4C018DA8174E2D7E00132BD4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C018DA7174E2D7E00132BD4 /* libsqlite3.dylib */; };
+		4C018DA9174E2D8C00132BD4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C018DA5174E2D7300132BD4 /* CFNetwork.framework */; };
+		4C018DAA174E2D9300132BD4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C018DA7174E2D7E00132BD4 /* libsqlite3.dylib */; };
+		4C018DAB174E2D9C00132BD4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C018DA3174E2D6B00132BD4 /* QuartzCore.framework */; };
+		4C018DAD174E2DDF00132BD4 /* libMonkeyTalk-1.0.47.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C018DAC174E2DDF00132BD4 /* libMonkeyTalk-1.0.47.a */; };
+		4C018DAE174E2DDF00132BD4 /* libMonkeyTalk-1.0.47.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C018DAC174E2DDF00132BD4 /* libMonkeyTalk-1.0.47.a */; };
 		4C4D810016E0EDD9005A06A8 /* ETAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D80FF16E0EDD9005A06A8 /* ETAUtility.m */; };
 		4C60763816DDF711001A5A87 /* ETAContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60763716DDF711001A5A87 /* ETAContactsViewController.m */; };
 		4C60763A16DE10E7001A5A87 /* zappkpart.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C60763916DE10E7001A5A87 /* zappkpart.txt */; };
@@ -33,6 +87,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C018D80174E2D2800132BD4 /* SimpleSAPContacts copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleSAPContacts copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C018D81174E2D2800132BD4 /* SimpleSAPContacts copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSAPContacts copy-Info.plist"; path = "/Users/Amarsingh/Development/BattleGround/SimpleSAPContacts/SimpleSAPContacts copy-Info.plist"; sourceTree = "<absolute>"; };
+		4C018DA0174E2D3200132BD4 /* SimpleSAPContacts-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleSAPContacts-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C018DA2174E2D3200132BD4 /* SimpleSAPContacts copy 2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSAPContacts copy 2-Info.plist"; path = "/Users/Amarsingh/Development/BattleGround/SimpleSAPContacts/SimpleSAPContacts copy 2-Info.plist"; sourceTree = "<absolute>"; };
+		4C018DA3174E2D6B00132BD4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4C018DA5174E2D7300132BD4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4C018DA7174E2D7E00132BD4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4C018DAC174E2DDF00132BD4 /* libMonkeyTalk-1.0.47.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libMonkeyTalk-1.0.47.a"; sourceTree = "<group>"; };
 		4C4D80FE16E0EDD9005A06A8 /* ETAUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAUtility.h; sourceTree = "<group>"; };
 		4C4D80FF16E0EDD9005A06A8 /* ETAUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAUtility.m; sourceTree = "<group>"; };
 		4C60763616DDF711001A5A87 /* ETAContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAContactsViewController.h; sourceTree = "<group>"; };
@@ -70,6 +132,42 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C018D6E174E2D2800132BD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C018DA8174E2D7E00132BD4 /* libsqlite3.dylib in Frameworks */,
+				4C018DA6174E2D7300132BD4 /* CFNetwork.framework in Frameworks */,
+				4C018DA4174E2D6B00132BD4 /* QuartzCore.framework in Frameworks */,
+				4C018D6F174E2D2800132BD4 /* AddressBook.framework in Frameworks */,
+				4C018D70174E2D2800132BD4 /* MapKit.framework in Frameworks */,
+				4C018D71174E2D2800132BD4 /* CoreLocation.framework in Frameworks */,
+				4C018D72174E2D2800132BD4 /* UIKit.framework in Frameworks */,
+				4C018D73174E2D2800132BD4 /* Foundation.framework in Frameworks */,
+				4C018D74174E2D2800132BD4 /* CoreGraphics.framework in Frameworks */,
+				4C018D75174E2D2800132BD4 /* CoreData.framework in Frameworks */,
+				4C018DAD174E2DDF00132BD4 /* libMonkeyTalk-1.0.47.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C018D8E174E2D3200132BD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C018DAB174E2D9C00132BD4 /* QuartzCore.framework in Frameworks */,
+				4C018DAA174E2D9300132BD4 /* libsqlite3.dylib in Frameworks */,
+				4C018DA9174E2D8C00132BD4 /* CFNetwork.framework in Frameworks */,
+				4C018D8F174E2D3200132BD4 /* AddressBook.framework in Frameworks */,
+				4C018D90174E2D3200132BD4 /* MapKit.framework in Frameworks */,
+				4C018D91174E2D3200132BD4 /* CoreLocation.framework in Frameworks */,
+				4C018D92174E2D3200132BD4 /* UIKit.framework in Frameworks */,
+				4C018D93174E2D3200132BD4 /* Foundation.framework in Frameworks */,
+				4C018D94174E2D3200132BD4 /* CoreGraphics.framework in Frameworks */,
+				4C018D95174E2D3200132BD4 /* CoreData.framework in Frameworks */,
+				4C018DAE174E2DDF00132BD4 /* libMonkeyTalk-1.0.47.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C7ABD6216DDED5F0092E789 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,12 +185,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C018DA1174E2D3200132BD4 /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Resources-iPad";
+			sourceTree = "<group>";
+		};
 		4C7ABD5C16DDED5F0092E789 = {
 			isa = PBXGroup;
 			children = (
+				4C018DA1174E2D3200132BD4 /* Resources-iPad */,
 				4C7ABD7016DDED600092E789 /* SimpleSAPContacts */,
 				4C7ABD6716DDED5F0092E789 /* Frameworks */,
 				4C7ABD6616DDED5F0092E789 /* Products */,
+				4C018D81174E2D2800132BD4 /* SimpleSAPContacts copy-Info.plist */,
+				4C018DA2174E2D3200132BD4 /* SimpleSAPContacts copy 2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				4C7ABD6516DDED5F0092E789 /* SimpleSAPContacts.app */,
+				4C018D80174E2D2800132BD4 /* SimpleSAPContacts copy.app */,
+				4C018DA0174E2D3200132BD4 /* SimpleSAPContacts-iPad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +217,10 @@
 		4C7ABD6716DDED5F0092E789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C018DA7174E2D7E00132BD4 /* libsqlite3.dylib */,
+				4C018DA5174E2D7300132BD4 /* CFNetwork.framework */,
+				4C018DA3174E2D6B00132BD4 /* QuartzCore.framework */,
+				4C018DAC174E2DDF00132BD4 /* libMonkeyTalk-1.0.47.a */,
 				4C60764E16DF3ABB001A5A87 /* AddressBook.framework */,
 				4C60764916DF32A1001A5A87 /* MapKit.framework */,
 				4C60764716DF329A001A5A87 /* CoreLocation.framework */,
@@ -162,6 +276,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4C018D62174E2D2800132BD4 /* SimpleSAPContactsTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C018D7D174E2D2800132BD4 /* Build configuration list for PBXNativeTarget "SimpleSAPContactsTest" */;
+			buildPhases = (
+				4C018D63174E2D2800132BD4 /* Sources */,
+				4C018D6E174E2D2800132BD4 /* Frameworks */,
+				4C018D76174E2D2800132BD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleSAPContactsTest;
+			productName = SimpleSAPContacts;
+			productReference = 4C018D80174E2D2800132BD4 /* SimpleSAPContacts copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C018D82174E2D3200132BD4 /* SimpleSAPContactsTest-iPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C018D9D174E2D3200132BD4 /* Build configuration list for PBXNativeTarget "SimpleSAPContactsTest-iPad" */;
+			buildPhases = (
+				4C018D83174E2D3200132BD4 /* Sources */,
+				4C018D8E174E2D3200132BD4 /* Frameworks */,
+				4C018D96174E2D3200132BD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SimpleSAPContactsTest-iPad";
+			productName = SimpleSAPContacts;
+			productReference = 4C018DA0174E2D3200132BD4 /* SimpleSAPContacts-iPad.app */;
+			productType = "com.apple.product-type.application";
+		};
 		4C7ABD6416DDED5F0092E789 /* SimpleSAPContacts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C7ABD9016DDED620092E789 /* Build configuration list for PBXNativeTarget "SimpleSAPContacts" */;
@@ -202,11 +350,39 @@
 			projectRoot = "";
 			targets = (
 				4C7ABD6416DDED5F0092E789 /* SimpleSAPContacts */,
+				4C018D62174E2D2800132BD4 /* SimpleSAPContactsTest */,
+				4C018D82174E2D3200132BD4 /* SimpleSAPContactsTest-iPad */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C018D76174E2D2800132BD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C018D77174E2D2800132BD4 /* InfoPlist.strings in Resources */,
+				4C018D78174E2D2800132BD4 /* Default.png in Resources */,
+				4C018D79174E2D2800132BD4 /* Default@2x.png in Resources */,
+				4C018D7A174E2D2800132BD4 /* Default-568h@2x.png in Resources */,
+				4C018D7B174E2D2800132BD4 /* MainStoryboard.storyboard in Resources */,
+				4C018D7C174E2D2800132BD4 /* zappkpart.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C018D96174E2D3200132BD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C018D97174E2D3200132BD4 /* InfoPlist.strings in Resources */,
+				4C018D98174E2D3200132BD4 /* Default.png in Resources */,
+				4C018D99174E2D3200132BD4 /* Default@2x.png in Resources */,
+				4C018D9A174E2D3200132BD4 /* Default-568h@2x.png in Resources */,
+				4C018D9B174E2D3200132BD4 /* MainStoryboard.storyboard in Resources */,
+				4C018D9C174E2D3200132BD4 /* zappkpart.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C7ABD6316DDED5F0092E789 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,6 +399,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C018D63174E2D2800132BD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C018D64174E2D2800132BD4 /* main.m in Sources */,
+				4C018D65174E2D2800132BD4 /* ETAAppDelegate.m in Sources */,
+				4C018D66174E2D2800132BD4 /* SimpleSAPContacts.xcdatamodeld in Sources */,
+				4C018D67174E2D2800132BD4 /* ETAContactsViewController.m in Sources */,
+				4C018D68174E2D2800132BD4 /* Contact.m in Sources */,
+				4C018D69174E2D2800132BD4 /* ETADetailViewController.m in Sources */,
+				4C018D6A174E2D2800132BD4 /* ETAClientLocation.m in Sources */,
+				4C018D6B174E2D2800132BD4 /* ETADetailMapViewController.m in Sources */,
+				4C018D6C174E2D2800132BD4 /* ContactDetails.m in Sources */,
+				4C018D6D174E2D2800132BD4 /* ETAUtility.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C018D83174E2D3200132BD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C018D84174E2D3200132BD4 /* main.m in Sources */,
+				4C018D85174E2D3200132BD4 /* ETAAppDelegate.m in Sources */,
+				4C018D86174E2D3200132BD4 /* SimpleSAPContacts.xcdatamodeld in Sources */,
+				4C018D87174E2D3200132BD4 /* ETAContactsViewController.m in Sources */,
+				4C018D88174E2D3200132BD4 /* Contact.m in Sources */,
+				4C018D89174E2D3200132BD4 /* ETADetailViewController.m in Sources */,
+				4C018D8A174E2D3200132BD4 /* ETAClientLocation.m in Sources */,
+				4C018D8B174E2D3200132BD4 /* ETADetailMapViewController.m in Sources */,
+				4C018D8C174E2D3200132BD4 /* ContactDetails.m in Sources */,
+				4C018D8D174E2D3200132BD4 /* ETAUtility.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C7ABD6116DDED5F0092E789 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,6 +472,86 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C018D7E174E2D2800132BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSAPContacts/SimpleSAPContacts-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSAPContacts copy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "SimpleSAPContacts copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4C018D7F174E2D2800132BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSAPContacts/SimpleSAPContacts-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSAPContacts copy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "SimpleSAPContacts copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4C018D9E174E2D3200132BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSAPContacts/SimpleSAPContacts-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSAPContacts copy 2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "SimpleSAPContacts-iPad";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4C018D9F174E2D3200132BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSAPContacts/SimpleSAPContacts-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSAPContacts copy 2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "SimpleSAPContacts-iPad";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		4C7ABD8E16DDED620092E789 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -343,6 +633,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C018D7D174E2D2800132BD4 /* Build configuration list for PBXNativeTarget "SimpleSAPContactsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C018D7E174E2D2800132BD4 /* Debug */,
+				4C018D7F174E2D2800132BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C018D9D174E2D3200132BD4 /* Build configuration list for PBXNativeTarget "SimpleSAPContactsTest-iPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C018D9E174E2D3200132BD4 /* Debug */,
+				4C018D9F174E2D3200132BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4C7ABD6016DDED5F0092E789 /* Build configuration list for PBXProject "SimpleSAPContacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
