@@ -48,6 +48,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 //    [self.view bringSubviewToFront:self.activityIndicator];
+    
+//    [self reloadDataOnView];
 
 }
 
@@ -105,7 +107,7 @@
 - (void)parseFetchedContactsData:(NSData *)responseData {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     NSError *error = nil;
-    
+
 //    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"zappkpart" ofType:@"txt"];
 //    NSData *jsonStrinData = [NSData dataWithContentsOfFile:filePath];
 //    NSString *test = [[NSString alloc] initWithData:jsonStrinData encoding:NSUTF8StringEncoding];
@@ -175,7 +177,10 @@
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
-    
+    if (!self.managedObjectContext) {
+        ETAAppDelegate *delegate = (ETAAppDelegate*)[[UIApplication sharedApplication] delegate];
+        self.managedObjectContext = delegate.managedObjectContext;
+    }
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *event = [NSEntityDescription entityForName:@"Contact" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:event];

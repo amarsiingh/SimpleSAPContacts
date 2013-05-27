@@ -8,6 +8,7 @@
 
 #import "ETAAppDelegate.h"
 
+#import "ETARootViewController.h"
 #import "ETAContactsViewController.h"
 #import "ETADetailMapViewController.h"
 #import "ETAUtility.h"
@@ -42,19 +43,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    ETAContactsViewController *controller = (ETAContactsViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
-    
-    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    self.activityIndicator.color = [UIColor blueColor];
-    self.activityIndicator.alpha = 1.0;
-    self.activityIndicator.center = CGPointMake([UIScreen mainScreen].applicationFrame.size.width/2.0f, [UIScreen mainScreen].applicationFrame.size.height/2.0f);
-    self.activityIndicator.hidesWhenStopped = NO;
-    
-    [controller.view addSubview:_activityIndicator];
-    [controller.view bringSubviewToFront:_activityIndicator];
-    [_activityIndicator startAnimating];
+
     
     //location services disabled alert
     if ([CLLocationManager locationServicesEnabled] == NO) {
@@ -67,19 +56,7 @@
     
 
     
-    if (![self coreDataHasEntriesForEntityName:@"Contact"]) {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 
-        dispatch_async(kBgQueue,
-                       ^{
-                           NSData *jsonData = [NSData dataWithContentsOfURL:kSAPContactsURL];
-                           
-                           [self performSelectorOnMainThread:@selector(contactsDataReceived:) withObject:jsonData waitUntilDone:YES];
-                       });
-    }
-    else {
-        [controller performSelectorInBackground:@selector(reloadDataOnView) withObject:nil];
-    }
 
     return YES;
 }
@@ -141,6 +118,10 @@
         _managedObjectContext = [[NSManagedObjectContext alloc] init];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
+    
+    ETARootViewController *rootVC = (ETARootViewController*)((UINavigationController*)[self.window rootViewController]).topViewController;
+    [rootVC.invokeFetchContactsButton setEnabled:YES];
+    
     return _managedObjectContext;
 }
 
@@ -211,8 +192,16 @@
 
 - (void)contactsDataReceived:(NSData *)receivedData {
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    ETAContactsViewController *controller = (ETAContactsViewController *)navigationController.topViewController;
-    
+    ETAContactsViewController *controller = nil;
+    UIViewController *topVC = navigationController.topViewController;
+    if ([topVC isMemberOfClass:[ETARootViewController class]]) {
+        controller = [((ETARootViewController*)topVC) contactsViewController];
+    }
+    else {
+        controller = (ETAContactsViewController*)topVC;
+    }
+//    ETAContactsViewController *controller = ((ETARootViewController *)navigationController.topViewController).contactsViewController;
+    controller.managedObjectContext = self.managedObjectContext;
     [controller performSelectorInBackground:@selector(parseFetchedContactsData:) withObject:receivedData];
 
 }
