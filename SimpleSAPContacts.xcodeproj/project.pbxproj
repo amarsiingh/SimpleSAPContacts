@@ -83,14 +83,17 @@
 		4C7ABD8116DDED610092E789 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8016DDED610092E789 /* Default-568h@2x.png */; };
 		4C7ABD8416DDED620092E789 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8216DDED620092E789 /* MainStoryboard.storyboard */; };
 		4C7ABD8716DDED620092E789 /* SimpleSAPContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C7ABD8516DDED620092E789 /* SimpleSAPContacts.xcdatamodeld */; };
+		4C7E759A174F6FE300CAA78C /* ETARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E7599174F6FE300CAA78C /* ETARootViewController.m */; };
+		4C7E759B174F6FE300CAA78C /* ETARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E7599174F6FE300CAA78C /* ETARootViewController.m */; };
+		4C7E759C174F6FE300CAA78C /* ETARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7E7599174F6FE300CAA78C /* ETARootViewController.m */; };
 		4CAA2FED16DFCA800056D8A2 /* ContactDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2FEC16DFCA800056D8A2 /* ContactDetails.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C018D80174E2D2800132BD4 /* SimpleSAPContacts copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleSAPContacts copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C018D81174E2D2800132BD4 /* SimpleSAPContacts copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSAPContacts copy-Info.plist"; path = "/Users/Amarsingh/Development/BattleGround/SimpleSAPContacts/SimpleSAPContacts copy-Info.plist"; sourceTree = "<absolute>"; };
+		4C018D81174E2D2800132BD4 /* SimpleSAPContactsTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSAPContactsTest-Info.plist"; path = "/Users/Amarsingh/Development/BattleGround/SimpleSAPContacts/SimpleSAPContactsTest-Info.plist"; sourceTree = "<absolute>"; };
 		4C018DA0174E2D3200132BD4 /* SimpleSAPContacts-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleSAPContacts-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C018DA2174E2D3200132BD4 /* SimpleSAPContacts copy 2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSAPContacts copy 2-Info.plist"; path = "/Users/Amarsingh/Development/BattleGround/SimpleSAPContacts/SimpleSAPContacts copy 2-Info.plist"; sourceTree = "<absolute>"; };
+		4C018DA2174E2D3200132BD4 /* SimpleSAPContactsiPad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSAPContactsiPad-Info.plist"; path = "/Users/Amarsingh/Development/BattleGround/SimpleSAPContacts/SimpleSAPContactsiPad-Info.plist"; sourceTree = "<absolute>"; };
 		4C018DA3174E2D6B00132BD4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4C018DA5174E2D7300132BD4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4C018DA7174E2D7E00132BD4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 		4C7ABD8016DDED610092E789 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4C7ABD8316DDED620092E789 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4C7ABD8616DDED620092E789 /* SimpleSAPContacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleSAPContacts.xcdatamodel; sourceTree = "<group>"; };
+		4C7E7598174F6FE300CAA78C /* ETARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETARootViewController.h; sourceTree = "<group>"; };
+		4C7E7599174F6FE300CAA78C /* ETARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETARootViewController.m; sourceTree = "<group>"; };
 		4CAA2FEB16DFCA800056D8A2 /* ContactDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetails.h; sourceTree = "<group>"; };
 		4CAA2FEC16DFCA800056D8A2 /* ContactDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetails.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,8 +204,8 @@
 				4C7ABD7016DDED600092E789 /* SimpleSAPContacts */,
 				4C7ABD6716DDED5F0092E789 /* Frameworks */,
 				4C7ABD6616DDED5F0092E789 /* Products */,
-				4C018D81174E2D2800132BD4 /* SimpleSAPContacts copy-Info.plist */,
-				4C018DA2174E2D3200132BD4 /* SimpleSAPContacts copy 2-Info.plist */,
+				4C018D81174E2D2800132BD4 /* SimpleSAPContactsTest-Info.plist */,
+				4C018DA2174E2D3200132BD4 /* SimpleSAPContactsiPad-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,6 +242,8 @@
 			children = (
 				4C7ABD7916DDED610092E789 /* ETAAppDelegate.h */,
 				4C7ABD7A16DDED610092E789 /* ETAAppDelegate.m */,
+				4C7E7598174F6FE300CAA78C /* ETARootViewController.h */,
+				4C7E7599174F6FE300CAA78C /* ETARootViewController.m */,
 				4C7ABD8216DDED620092E789 /* MainStoryboard.storyboard */,
 				4C60763616DDF711001A5A87 /* ETAContactsViewController.h */,
 				4C60763716DDF711001A5A87 /* ETAContactsViewController.m */,
@@ -413,6 +420,7 @@
 				4C018D6B174E2D2800132BD4 /* ETADetailMapViewController.m in Sources */,
 				4C018D6C174E2D2800132BD4 /* ContactDetails.m in Sources */,
 				4C018D6D174E2D2800132BD4 /* ETAUtility.m in Sources */,
+				4C7E759B174F6FE300CAA78C /* ETARootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +438,7 @@
 				4C018D8B174E2D3200132BD4 /* ETADetailMapViewController.m in Sources */,
 				4C018D8C174E2D3200132BD4 /* ContactDetails.m in Sources */,
 				4C018D8D174E2D3200132BD4 /* ETAUtility.m in Sources */,
+				4C7E759C174F6FE300CAA78C /* ETARootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +456,7 @@
 				4C60765216DF4704001A5A87 /* ETADetailMapViewController.m in Sources */,
 				4CAA2FED16DFCA800056D8A2 /* ContactDetails.m in Sources */,
 				4C4D810016E0EDD9005A06A8 /* ETAUtility.m in Sources */,
+				4C7E759A174F6FE300CAA78C /* ETARootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
