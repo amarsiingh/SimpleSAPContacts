@@ -29,6 +29,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUK-HR-S70">
+                                <accessibility key="accessibilityConfiguration" label="fetchContactsButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="157" id="khu-Ai-2l4"/>
                                 </constraints>
@@ -44,7 +45,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="invokeFetchContactsAction:" destination="ez4-tZ-FFS" eventType="touchUpInside" id="HaG-Gn-GbL"/>
                                     <segue destination="12" kind="push" identifier="ContactsView" id="wlM-m7-WxT"/>
                                 </connections>
                             </button>
@@ -307,7 +307,6 @@
         <class className="ETARootViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ETARootViewController.h"/>
             <relationships>
-                <relationship kind="action" name="invokeFetchContactsAction:"/>
                 <relationship kind="outlet" name="invokeFetchContactsButton" candidateClass="UIButton"/>
             </relationships>
         </class>

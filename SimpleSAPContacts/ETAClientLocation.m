@@ -56,6 +56,9 @@
     MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
     
     mapItem.name = self.title;
+    mapItem.accessibilityLabel = @"mapItemLabel";
+    mapItem.accessibilityHint = @"mapItemHint";
+    
     
     return mapItem;
 }

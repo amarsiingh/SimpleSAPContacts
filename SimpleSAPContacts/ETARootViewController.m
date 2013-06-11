@@ -38,6 +38,8 @@
     if (![self invokeFetchContactsButton].enabled) {
         [delegate managedObjectContext];
     }
+    
+    self.invokeFetchContactsButton.isAccessibilityElement = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,40 +48,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - IBActions
-
-- (IBAction)invokeFetchContactsAction:(id)sender {
-    ETAAppDelegate *delegate = (ETAAppDelegate*)[[UIApplication sharedApplication] delegate];
-    
-    UINavigationController *navigationController = (UINavigationController *)delegate.window.rootViewController;
-//    ETAContactsViewController *controller = (ETAContactsViewController *)navigationController.topViewController;
-    ETAContactsViewController *controller = [[ETAContactsViewController alloc] initWithStyle:UITableViewStylePlain];
-    controller.managedObjectContext = delegate.managedObjectContext;
-    
-    delegate.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    delegate.activityIndicator.color = [UIColor blueColor];
-    delegate.activityIndicator.alpha = 1.0;
-    delegate.activityIndicator.center = CGPointMake([UIScreen mainScreen].applicationFrame.size.width/2.0f, [UIScreen mainScreen].applicationFrame.size.height/2.0f);
-    delegate.activityIndicator.hidesWhenStopped = NO;
-    
-    [self.view addSubview:delegate.activityIndicator];
-    [self.view bringSubviewToFront:delegate.activityIndicator];
-    [delegate.activityIndicator startAnimating];
-    
-//    if (![delegate coreDataHasEntriesForEntityName:@"Contact"]) {
-//        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-//        dispatch_async(kBgQueue,
-//                       ^{
-//                           NSData *jsonData = [NSData dataWithContentsOfURL:kSAPContactsURL];
-//                           
-//                           [delegate performSelectorOnMainThread:@selector(contactsDataReceived:) withObject:jsonData waitUntilDone:YES];
-//                       });
-//    }
-//    else {
-////        [controller performSelectorInBackground:@selector(reloadDataOnView) withObject:nil];
-////        [controller performSelectorOnMainThread:@selector(reloadDataOnView) withObject:nil waitUntilDone:NO];
-//    }
-}
 
 #pragma mark - Segue 
 
@@ -89,6 +57,15 @@
         ETAContactsViewController *controller = (ETAContactsViewController*)segue.destinationViewController;
         controller.managedObjectContext = delegate.managedObjectContext;
         
+        delegate.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        delegate.activityIndicator.color = [UIColor blueColor];
+        delegate.activityIndicator.alpha = 1.0;
+        delegate.activityIndicator.center = CGPointMake([UIScreen mainScreen].applicationFrame.size.width/2.0f, [UIScreen mainScreen].applicationFrame.size.height/2.0f);
+        delegate.activityIndicator.hidesWhenStopped = NO;
+        
+        [controller.view addSubview:delegate.activityIndicator];
+        [controller.view bringSubviewToFront:delegate.activityIndicator];
+        [delegate.activityIndicator startAnimating];
         
         if (![delegate coreDataHasEntriesForEntityName:@"Contact"]) {
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
@@ -100,9 +77,7 @@
                            });
         }
         else {
-            //        [controller performSelectorInBackground:@selector(reloadDataOnView) withObject:nil];
             [controller performSelectorOnMainThread:@selector(reloadDataOnView) withObject:nil waitUntilDone:NO];
-//            [controller reloadDataOnView];
         }
     }
 }

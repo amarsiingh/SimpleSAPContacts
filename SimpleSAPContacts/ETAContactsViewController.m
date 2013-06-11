@@ -38,6 +38,10 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    //self.navigationItem.hidesBackButton = YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,9 +51,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//    [self.view bringSubviewToFront:self.activityIndicator];
-    
-//    [self reloadDataOnView];
 
 }
 
@@ -57,6 +58,9 @@
     self.fetchedResultsController = nil;
     self.activityIndicator = nil;
     self.viewGlobalMapButton = nil;
+    
+    self.tableView.isAccessibilityElement = YES;
+    self.tableView.accessibilityLabel = @"contactsList";
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,6 +92,8 @@
     
     // Configure the cell...
     [self configureCell:cell atIndexPath:indexPath];
+    cell.accessibilityIdentifier = @"contactCellIdentifier";
+    cell.accessibilityLabel = @"contactCellLabel";
     
     return cell;
 }
@@ -98,7 +104,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-//    [self performSegueWithIdentifier:@"showDetail" sender:self];
+    [self performSegueWithIdentifier:@"showDetail" sender:[tableView cellForRowAtIndexPath:indexPath]];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

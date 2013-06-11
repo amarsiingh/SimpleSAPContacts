@@ -200,7 +200,7 @@
     else {
         controller = (ETAContactsViewController*)topVC;
     }
-//    ETAContactsViewController *controller = ((ETARootViewController *)navigationController.topViewController).contactsViewController;
+    
     controller.managedObjectContext = self.managedObjectContext;
     [controller performSelectorInBackground:@selector(parseFetchedContactsData:) withObject:receivedData];
 

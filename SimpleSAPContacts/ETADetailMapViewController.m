@@ -213,7 +213,8 @@ static int centreOnce = 0;
         
         
         ETAClientLocation *annotation = [[ETAClientLocation alloc] initWithName:aContact.accountName address:address coordinate:toLocation.coordinate];
-        
+        annotation.accessibilityLabel = @"annotationLabel";
+        annotation.isAccessibilityElement = YES;
         [self.globalMapView addAnnotation:annotation];
     }
     else {
@@ -238,6 +239,8 @@ static int centreOnce = 0;
             annocationView.canShowCallout = YES;
             annocationView.animatesDrop = YES;
             annocationView.pinColor = MKPinAnnotationColorPurple;
+//            annocationView.accessibilityIdentifier = @"mapPinAnnotation";
+//            annocationView.accessibilityLabel = @"mapPinAnnotation";
         } else {
             annocationView.annotation = annotation;
         }

@@ -90,9 +90,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C018D80174E2D2800132BD4 /* SimpleSAPContacts copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleSAPContacts copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C018D80174E2D2800132BD4 /* SAPContacts-QA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAPContacts-QA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C018D81174E2D2800132BD4 /* SimpleSAPContactsTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSAPContactsTest-Info.plist"; path = "/Users/Amarsingh/Development/BattleGround/SimpleSAPContacts/SimpleSAPContactsTest-Info.plist"; sourceTree = "<absolute>"; };
-		4C018DA0174E2D3200132BD4 /* SimpleSAPContacts-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleSAPContacts-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C018DA0174E2D3200132BD4 /* SAPContactsiPad-QA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAPContactsiPad-QA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C018DA2174E2D3200132BD4 /* SimpleSAPContactsiPad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleSAPContactsiPad-Info.plist"; path = "/Users/Amarsingh/Development/BattleGround/SimpleSAPContacts/SimpleSAPContactsiPad-Info.plist"; sourceTree = "<absolute>"; };
 		4C018DA3174E2D6B00132BD4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4C018DA5174E2D7300132BD4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -213,8 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				4C7ABD6516DDED5F0092E789 /* SimpleSAPContacts.app */,
-				4C018D80174E2D2800132BD4 /* SimpleSAPContacts copy.app */,
-				4C018DA0174E2D3200132BD4 /* SimpleSAPContacts-iPad.app */,
+				4C018D80174E2D2800132BD4 /* SAPContacts-QA.app */,
+				4C018DA0174E2D3200132BD4 /* SAPContactsiPad-QA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 			);
 			name = SimpleSAPContactsTest;
 			productName = SimpleSAPContacts;
-			productReference = 4C018D80174E2D2800132BD4 /* SimpleSAPContacts copy.app */;
+			productReference = 4C018D80174E2D2800132BD4 /* SAPContacts-QA.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4C018D82174E2D3200132BD4 /* SimpleSAPContactsTest-iPad */ = {
@@ -314,7 +314,7 @@
 			);
 			name = "SimpleSAPContactsTest-iPad";
 			productName = SimpleSAPContacts;
-			productReference = 4C018DA0174E2D3200132BD4 /* SimpleSAPContacts-iPad.app */;
+			productReference = 4C018DA0174E2D3200132BD4 /* SAPContactsiPad-QA.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4C7ABD6416DDED5F0092E789 /* SimpleSAPContacts */ = {
@@ -487,7 +487,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSAPContacts/SimpleSAPContacts-Prefix.pch";
-				INFOPLIST_FILE = "SimpleSAPContacts copy-Info.plist";
+				INFOPLIST_FILE = "SimpleSAPContactsTest-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -496,7 +496,7 @@
 					"-all_load",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "SimpleSAPContacts copy";
+				PRODUCT_NAME = "SAPContacts-QA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -506,7 +506,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSAPContacts/SimpleSAPContacts-Prefix.pch";
-				INFOPLIST_FILE = "SimpleSAPContacts copy-Info.plist";
+				INFOPLIST_FILE = "SimpleSAPContactsTest-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -515,7 +515,7 @@
 					"-all_load",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "SimpleSAPContacts copy";
+				PRODUCT_NAME = SAPContacts;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -525,7 +525,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSAPContacts/SimpleSAPContacts-Prefix.pch";
-				INFOPLIST_FILE = "SimpleSAPContacts copy 2-Info.plist";
+				INFOPLIST_FILE = "SimpleSAPContactsiPad-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -535,7 +535,7 @@
 					"-all_load",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "SimpleSAPContacts-iPad";
+				PRODUCT_NAME = "SAPContactsiPad-QA";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -546,7 +546,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSAPContacts/SimpleSAPContacts-Prefix.pch";
-				INFOPLIST_FILE = "SimpleSAPContacts copy 2-Info.plist";
+				INFOPLIST_FILE = "SimpleSAPContactsiPad-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,7 +556,7 @@
 					"-all_load",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "SimpleSAPContacts-iPad";
+				PRODUCT_NAME = SAPContactsiPad;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};

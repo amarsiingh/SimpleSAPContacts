@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *invokeFetchContactsButton;
 @property (retain, nonatomic) ETAContactsViewController *contactsViewController;
 
-- (IBAction)invokeFetchContactsAction:(id)sender;
 
 
 @end
